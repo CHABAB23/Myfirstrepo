@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <title>all conversion sections</title>
+      <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+      <section id="home">
+        <header>
+          Unit Conversions
+        </header>
+        <nav>
+          <div class="topdiv">
+            <a href="#temperature"><button  class="topmenu">Temperature</button></a>
+            <a href="#weight"><button  class="topmenu">Weight</button></a>
+            <a href="#distance"><button  class="topmenu">Distance</button></a>
+          </div>
+        </nav>
+      </section>    
+      <div style="clear:both;"></div>
+     
+      <div id="all-conversion-sections">
+
+
+        <section id="temperature"  class="b temperature">
+          <div id="tmp">
+            <figure>
+              <img src="https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-CD0101EN-SkillsNetwork/labs/Theia%20Labs/02%20-%20HTML5%20Elements/images/thermo.png" width="150px"/>
+              <figcaption>Celcius to Farenheit Conversion</figcaption>
+            </figure>
+            <article> 
+              <fieldset>
+                <legend>Temperature</legend>
+                <label for="Temperature">Celsius</label> <br/>
+                 <input type="text" id="celsiusInput" >
+                  <button type="button" id="B1" onclick="convertToFahrenheit()">Convertir</button>
+                    <br/>
+                    <button id="fahrenheitOutput"> </button>
+                    <br/>
+
+                      <script>
+                      function convertToFahrenheit() {
+                        // Récupérez la température en Celsius du champ de saisie.
+                        let celsius = document.getElementById("celsiusInput").value;
+
+                        // Convertissez la température en Celsius en Fahrenheit.
+                        let fahrenheit = (celsius * 9/5) + 32;
+
+                        // Affichez la température convertie en Fahrenheit à l'utilisateur.
+                        document.getElementById("fahrenheitOutput").innerHTML = fahrenheit + "°F";
+                      }
+                      </script>
+              </fieldset>
+              <aside>
+                To convert celsuis to fahrenheit yourself, use this formula replacing the `C` with your temperature in celsuis: (C × 9/5) + 32
+              </aside>
+            </article>
+          </div>
+        </section>
+
+        <div style="clear:both;"></div>
+        <section id="weight"  class="b weight">          
+          <div id="wgt">
+            <figure>
+              <img src="https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-CD0101EN-SkillsNetwork/labs/Theia%20Labs/02%20-%20HTML5%20Elements/images/weight.png"  width="150px"/>
+              <figcaption>Kilograms to Pound Conversion</figcaption>
+            </figure>
+            <article>
+              <fieldset>
+                <legend>Weight</legend>
+                <label for="Weight">KG</label> <br/>
+
+                  <input type="text" id="weightInput" >
+                  <button type="button" id="B2" onclick="convertToPounds()">Convertir</button>
+                    <br/>
+                    <button id="poundsOutput"> </button>
+                    <br/>
+
+                      <script>
+                      function convertToPounds() {
+                        // Récupérez la température en Celsius du champ de saisie.
+                        var kg = document.getElementById("weightInput").value;
+
+                        // Convertissez la température en Celsius en Fahrenheit.
+                        var pounds = kg * 2.205;
+
+                        // Affichez la température convertie en Fahrenheit à l'utilisateur.
+                        document.getElementById("poundsOutput").innerHTML = pounds + " lbs";
+                      }
+                      </script>  
+              </fieldset>
+              <aside>
+                To convert kilograms to pounds yourself, use this formula replacing the `kg` with your weight in kilograms: kg x 2.205
+              </aside>      
+            </article>
+          </div>
+        </section>
+
+
+
+        <div style="clear:both;"></div>
+
+
+        <section id="distance"  class="b distance">
+          <div id="dst">
+            <figure>
+              <img src="https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-CD0101EN-SkillsNetwork/labs/Theia%20Labs/02%20-%20HTML5%20Elements/images/speedo.png"  width="150px"/>
+              <figcaption>Kilometers to Miles Conversion</figcaption>
+            </figure>
+            <article>
+              <fieldset>
+                <legend>Distance</legend>
+                  <label for="Distance">KM</label> <br/>
+
+                  <input type="text" id="distanceInput" >
+                  <button type="button" id="B3" onclick="convertToDistance()">Convertir</button>
+                    <br/>
+                    <button id="distanceOutput"> </button>
+                    <br/>
+
+                      <script>
+                      function convertToDistance() {
+                        // Récupérez la température en Celsius du champ de saisie.
+                        var distance = document.getElementById("distanceInput").value;
+
+                        // Convertissez la température en Celsius en Fahrenheit.
+                        var mils = distance / 1.609;
+
+                        // Affichez la température convertie en Fahrenheit à l'utilisateur.
+                        document.getElementById("distanceOutput").innerHTML = mils + " mi";
+                      }
+                      </script>  
+              </fieldset>
+              </fieldset>
+              <aside>
+                To convert kilometers to miles yourself, use this formula replacing the `km` with your distance in kilmeters: km &divide; 1.609
+              </aside>
+    
+            </article>
+          </div>
+        </section>
+        <div style="clear:both;"></div>
+
+      </div>
+
+      <div id="go-home" class="iconbutton">
+      <a href="#home">
+        <img src="https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-CD0101EN-SkillsNetwork/labs/Theia%20Labs/02%20-%20HTML5%20Elements/images/home.svg"/>
+      </a>
+    </div>
+
+    <footer>Learn more about HTML and CSS as a part of IBM Fullstack Cloud Developer Certification</footer>
+
+
+ 
+
+  </body>
+</html>
